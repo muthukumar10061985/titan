@@ -1,0 +1,44 @@
+{
+  "header": {
+    "configurationId": "Config_DV_000001",
+    "configurationName": "Vent Data",
+    "version": "v1.0",
+    "createdBy": "Titan",
+    "createdDate": "26-01-2023"
+  },
+  "body": {
+    "logLevel": "DEBUG",
+    "serviceDataValidation": {
+      "items":[
+        {
+          "fieldName": "MntrRateSpon",
+          "traversalPath": "data.monitor.MntrRateSpon.data",
+          "validationType": "inbuilt",
+          "validationName": "TextPatternValidation",
+          "validationInput": "{\"pattern\":\"^[0-9]+$\"}",
+          "validationOutputName": "validated_MntrRateSpon",
+          "errorMessage": "MntrRateSpon should contain only numbers",
+          "mandatoryField": "Y",
+          "validationSequence": "01",
+          "defaultValue": "",
+          "outputPath": "validated_MntrRateSpon",
+          "exceptionHandling": "warning"
+        },
+		{
+          "fieldName": "LimitEndTidalCO2High",
+          "traversalPath": "data.setting.LimitEndTidalCO2High.data",
+          "validationType": "inbuilt",
+          "validationName": "TextPatternValidation",
+          "validationInput": "{\"pattern\":\"^[0-9]+$\"}",
+          "validationOutputName": "validated_LimitEndTidalCO2High",
+          "errorMessage": "LimitEndTidalCO2High should contain only numbers",
+          "mandatoryField": "Y",
+          "validationSequence": "02",
+          "defaultValue": "",
+          "outputPath": "validated_LimitEndTidalCO2High",
+          "exceptionHandling": "warning"
+        }
+      ]
+    }
+  }
+}
