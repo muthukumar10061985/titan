@@ -1,8 +1,0 @@
-{
-    "patternType": "BAE",
-    "patternName": "Associated Patient",
-    "inputEventId": "",
-    "businessEventId": "BAE_000002",
-    "patternDefinition": "{\"baeId\":\"BAE_000002\",\"rule\":\"BAE(payload/data/patientID NOTEMPTYORNULL '')\"}",
-    "status": "ACTIVE"
-}
